@@ -79,7 +79,7 @@ jobs:
 
       - name: 💬 Comment on PR
         if: ${{ success() && github.event_name == 'pull_request' }}
-        uses: marocchino/sticky-pull-request-comment@52423e01640425a022ef5fd42c6fb5f633a02728 # v2.9.1
+        uses: marocchino/sticky-pull-request-comment@67d0dec7b07ed060a405f9b2a64b8ab319fdd7db # v2.9.2
         with:
           header: delete-pr-preview-success
           message: |
@@ -88,7 +88,7 @@ jobs:
 
       - name: 🫠 Comment on PR for failure
         if: ${{ failure() && github.event_name == 'pull_request' }}
-        uses: marocchino/sticky-pull-request-comment@52423e01640425a022ef5fd42c6fb5f633a02728 # v2.9.1
+        uses: marocchino/sticky-pull-request-comment@67d0dec7b07ed060a405f9b2a64b8ab319fdd7db # v2.9.2
         with:
           header: delete-pr-preview-failed
           hide_and_recreate: true
@@ -101,7 +101,7 @@ jobs:
 
       - name: 🫣 Hide failed comment
         if: ${{ success() && github.event_name == 'pull_request' }}
-        uses: marocchino/sticky-pull-request-comment@52423e01640425a022ef5fd42c6fb5f633a02728 # v2.9.1
+        uses: marocchino/sticky-pull-request-comment@67d0dec7b07ed060a405f9b2a64b8ab319fdd7db # v2.9.2
         with:
           header: delete-pr-preview-failed
           hide: true
@@ -109,7 +109,7 @@ jobs:
 
       - name: 🫣 Hide deployed comment
         if: ${{ success() && github.event_name == 'pull_request' }}
-        uses: marocchino/sticky-pull-request-comment@52423e01640425a022ef5fd42c6fb5f633a02728 # v2.9.1
+        uses: marocchino/sticky-pull-request-comment@67d0dec7b07ed060a405f9b2a64b8ab319fdd7db # v2.9.2
         with:
           header: deploy-pr-preview-success
           hide: true
